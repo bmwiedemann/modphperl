@@ -20,7 +20,7 @@ sub handler {
 	$r->content_type("text/html");
 	my $f=$r->filename;
 	if(-r $f) {
-		my $page=awstandard::file_content($f);
+		my $page=file_content($f);
 		my $pkg=$r->uri;
 		$pkg=~s/^\/+//;
 		$pkg=~s/[^a-zA-Z0-9_\/]/_/g;
